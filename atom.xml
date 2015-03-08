@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[zhangsanshi]]></title>
+  <subtitle><![CDATA[闻道有先后，术业有专攻]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2015-03-08T12:22:49.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name><![CDATA[zhangsanshi]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[在github上的第一篇文章]]></title>
+    <link href="http://yoursite.com/2015/03/08/first-article-in-github/"/>
+    <id>http://yoursite.com/2015/03/08/first-article-in-github/</id>
+    <published>2015-03-08T11:58:25.000Z</published>
+    <updated>2015-03-08T12:22:49.000Z</updated>
+    <content type="html"></content>
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="其他" scheme="http://yoursite.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
+  
+</feed>
