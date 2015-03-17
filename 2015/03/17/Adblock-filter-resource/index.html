@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Adblock-filter-static-resource | zhangsanshi</title>
+  <title>Adblock过滤网站的静态资源 | zhangsanshi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="问题出处:   今天无意中浏览一个网站，发现里面的所有的图片都挂掉了，
 解决办法:   起初没在意，以为是网络原因，刷新下，依然挂掉，就调出控制台看下，发现图片请求都挂掉了，报错是net::ERR_BLOCKED_BY_CLIENT，   因为不常见，没在意这个错误，就直接点开一个链接发现能获得图片，   百思不得其解，无意中看到右上角的adblock插件拦截N多资源，发现不对劲，于是禁用adbl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Adblock-filter-static-resource">
-<meta property="og:url" content="http://yoursite.com/2015/03/17/Adblock-filter-static-resource/index.html">
+<meta property="og:title" content="Adblock过滤网站的静态资源">
+<meta property="og:url" content="http://yoursite.com/2015/03/17/Adblock-filter-resource/index.html">
 <meta property="og:site_name" content="zhangsanshi">
 <meta property="og:description" content="问题出处:   今天无意中浏览一个网站，发现里面的所有的图片都挂掉了，
 解决办法:   起初没在意，以为是网络原因，刷新下，依然挂掉，就调出控制台看下，发现图片请求都挂掉了，报错是net::ERR_BLOCKED_BY_CLIENT，   因为不常见，没在意这个错误，就直接点开一个链接发现能获得图片，   百思不得其解，无意中看到右上角的adblock插件拦截N多资源，发现不对劲，于是禁用adbl">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Adblock-filter-static-resource">
+<meta name="twitter:title" content="Adblock过滤网站的静态资源">
 <meta name="twitter:description" content="问题出处:   今天无意中浏览一个网站，发现里面的所有的图片都挂掉了，
 解决办法:   起初没在意，以为是网络原因，刷新下，依然挂掉，就调出控制台看下，发现图片请求都挂掉了，报错是net::ERR_BLOCKED_BY_CLIENT，   因为不常见，没在意这个错误，就直接点开一个链接发现能获得图片，   百思不得其解，无意中看到右上角的adblock插件拦截N多资源，发现不对劲，于是禁用adbl">
   
@@ -67,9 +67,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Adblock-filter-static-resource" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Adblock-filter-resource" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/03/17/Adblock-filter-static-resource/" class="article-date">
+    <a href="/2015/03/17/Adblock-filter-resource/" class="article-date">
   <time datetime="2015-03-17T13:26:38.000Z" itemprop="datePublished">2015-03-17</time>
 </a>
     
@@ -81,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Adblock-filter-static-resource
+      Adblock过滤网站的静态资源
     </h1>
   
 
@@ -90,16 +90,16 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="问题出处:">问题出处:</h3><p>   今天无意中浏览一个网站，发现里面的所有的图片都挂掉了，</p>
-<h3 id="解决办法:">解决办法:</h3><p>   起初没在意，以为是网络原因，刷新下，依然挂掉，就调出控制台看下，发现图片请求都挂掉了，报错是net::ERR_BLOCKED_BY_CLIENT，<br>   因为不常见，没在意这个错误，就直接点开一个链接发现能获得图片，<br>   百思不得其解，无意中看到右上角的adblock插件拦截N多资源，发现不对劲，于是禁用adblock，图片请求这次可以拿到了，<br>   然后仔细观察了下图片的url，发现路径中含有AD开头的路径段落(类似/xx/Advertisement/xx)，结合以前听到的谣言，<br>   这些过滤插件会过滤AD(advertisement)之类的东西，所以问题的原因就出在路径</p>
-<h3 id="经验:">经验:</h3><p>   如果不是有意关注adblock这个插件，可能要花费一点时间去找出问题，却没注意浏览器报错<br>   以后写东西要注意这些插件造成的影响</p>
+<h3 id="解决办法:">解决办法:</h3><p>   起初没在意，以为是网络原因，刷新下，依然挂掉，就调出控制台看下，发现图片请求都挂掉了，报错是net::ERR_BLOCKED_BY_CLIENT，<br>   因为不常见，没在意这个错误，就直接点开一个链接发现能获得图片，<br>   百思不得其解，无意中看到右上角的adblock插件拦截N多资源，发现不对劲，于是禁用adblock，图片请求这次可以拿到了，<br>   然后仔细观察了下图片的url，发现路径中含有AD开头的路径段落(类似/xx/Advertisement/xx)，结合以前听到的“谣言”，<br>   这些过滤插件会过滤AD(advertisement)之类的东西，所以问题的原因就出在路径</p>
+<h3 id="总结:">总结:</h3><p>   如果不是有意关注adblock这个插件，可能要花费一点时间去找出问题，却没注意浏览器报错<br>   同时以后写东西要注意这些插件造成的影响</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/17/Adblock-filter-static-resource/" data-id="ci7ddeuml0000u0enwr52evp6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/17/Adblock-filter-resource/" data-id="ci7dglqju000618enytw9d6ef" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/adblock-ERR-BLOCKED-BY-CLIENT/">adblock,ERR_BLOCKED_BY_CLIENT</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ERR-BLOCKED-BY-CLIENT/">ERR_BLOCKED_BY_CLIENT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/adblock/">adblock</a></li></ul>
 
     </footer>
   </div>
@@ -126,25 +126,25 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">标签列表</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/adblock-ERR-BLOCKED-BY-CLIENT/">adblock,ERR_BLOCKED_BY_CLIENT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/其他/">其他</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ERR-BLOCKED-BY-CLIENT/">ERR_BLOCKED_BY_CLIENT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/adblock/">adblock</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/其他/">其他</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/adblock-ERR-BLOCKED-BY-CLIENT/" style="font-size: NaNpx;">adblock,ERR_BLOCKED_BY_CLIENT</a><a href="/tags/ubuntu/" style="font-size: NaNpx;">ubuntu</a><a href="/tags/其他/" style="font-size: NaNpx;">其他</a>
+      <a href="/tags/ERR-BLOCKED-BY-CLIENT/" style="font-size: NaNpx;">ERR_BLOCKED_BY_CLIENT</a><a href="/tags/adblock/" style="font-size: NaNpx;">adblock</a><a href="/tags/ubuntu/" style="font-size: NaNpx;">ubuntu</a><a href="/tags/其他/" style="font-size: NaNpx;">其他</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">归档</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">3</span></li></ul>
     </div>
@@ -153,12 +153,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recents</h3>
+    <h3 class="widget-title">最近文章</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2015/03/17/Adblock-filter-static-resource/">Adblock-filter-static-resource</a>
+            <a href="/2015/03/17/Adblock-filter-resource/">Adblock过滤网站的静态资源</a>
           </li>
         
           <li>
