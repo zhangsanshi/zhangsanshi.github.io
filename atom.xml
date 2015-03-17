@@ -94,10 +94,12 @@
     <link href="http://yoursite.com/2015/03/08/first-article-in-github/"/>
     <id>http://yoursite.com/2015/03/08/first-article-in-github/</id>
     <published>2015-03-08T11:58:25.000Z</published>
-    <updated>2015-03-08T12:22:49.000Z</updated>
-    <content type="html"></content>
+    <updated>2015-03-17T16:32:33.000Z</updated>
+    <content type="html"><![CDATA[<p>加油！一直努力写下去<br>——update 2015-03-18</p>
+]]></content>
     <summary type="html">
-    
+    <![CDATA[<p>加油！一直努力写下去<br>——update 2015-03-18</p>
+]]>
     </summary>
     
       <category term="其他" scheme="http://yoursite.com/tags/%E5%85%B6%E4%BB%96/"/>
