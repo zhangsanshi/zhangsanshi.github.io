@@ -3,17 +3,32 @@
 <head>
   <meta charset="utf-8">
   
-  <title>zhangsanshi</title>
+  <title>一些js的简便写法 | zhangsanshi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端分享">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zhangsanshi">
-<meta property="og:url" content="http://yoursite.com/tags/其他/index.html">
+  <meta name="description" content="没有考究性能，只是感到有趣获取当前是星期几说明:  这个方法是无意中看到的，当时就记得死死的
+function getDay(date) {
+    var weeks = [&apos;日&apos;, &apos;一&apos;, &apos;二&apos;, &apos;三&apos;, &apos;四&apos;, &apos;五&apos;, &apos;六&apos;];
+    return weeks[new Date(date).getDay()];
+}
+把object的属性放在一个数组里说明:   注意for循环，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一些js的简便写法">
+<meta property="og:url" content="http://yoursite.com/2015/03/17/javascript-shortcut/index.html">
 <meta property="og:site_name" content="zhangsanshi">
-<meta property="og:description" content="前端分享">
+<meta property="og:description" content="没有考究性能，只是感到有趣获取当前是星期几说明:  这个方法是无意中看到的，当时就记得死死的
+function getDay(date) {
+    var weeks = [&apos;日&apos;, &apos;一&apos;, &apos;二&apos;, &apos;三&apos;, &apos;四&apos;, &apos;五&apos;, &apos;六&apos;];
+    return weeks[new Date(date).getDay()];
+}
+把object的属性放在一个数组里说明:   注意for循环，">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhangsanshi">
-<meta name="twitter:description" content="前端分享">
+<meta name="twitter:title" content="一些js的简便写法">
+<meta name="twitter:description" content="没有考究性能，只是感到有趣获取当前是星期几说明:  这个方法是无意中看到的，当时就记得死死的
+function getDay(date) {
+    var weeks = [&apos;日&apos;, &apos;一&apos;, &apos;二&apos;, &apos;三&apos;, &apos;四&apos;, &apos;五&apos;, &apos;六&apos;];
+    return weeks[new Date(date).getDay()];
+}
+把object的属性放在一个数组里说明:   注意for循环，">
   
     <link rel="alternative" href="/atom.xml" title="zhangsanshi" type="application/atom+xml">
   
@@ -64,39 +79,71 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/03/08/first-article-in-github/" class="archive-article-date">
-  <time datetime="2015-03-08T11:58:25.000Z" itemprop="datePublished">3月 8</time>
+        <section id="main"><article id="post-javascript-shortcut" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/03/17/javascript-shortcut/" class="article-date">
+  <time datetime="2015-03-17T15:51:20.000Z" itemprop="datePublished">2015-03-17</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/08/first-article-in-github/">在github上的第一篇文章</a>
+    <h1 class="article-title" itemprop="name">
+      一些js的简便写法
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="没有考究性能，只是感到有趣">没有考究性能，只是感到有趣</h2><h3 id="获取当前是星期几">获取当前是星期几</h3><h5 id="说明:">说明:</h5><p>  这个方法是无意中看到的，当时就记得死死的</p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">getDay</span><span class="params">(date)</span> </span>{
+    <span class="keyword">var</span> weeks = [<span class="string">'日'</span>, <span class="string">'一'</span>, <span class="string">'二'</span>, <span class="string">'三'</span>, <span class="string">'四'</span>, <span class="string">'五'</span>, <span class="string">'六'</span>];
+    <span class="keyword">return</span> weeks[<span class="keyword">new</span> <span class="built_in">Date</span>(date).getDay()];
+}
+</code></pre><h3 id="把object的属性放在一个数组里">把object的属性放在一个数组里</h3><h5 id="说明:-1">说明:</h5><p>   注意for循环，是没有循环体的，利用的是for(key in obj)，会遍历obj属性且对key赋值</p>
+<pre><code>function attr2Arr(obj) {
+    <span class="keyword">var</span> <span class="literal">result</span> = [];
+    <span class="keyword">for</span> (<span class="literal">result</span>[<span class="literal">result</span>.length] <span class="keyword">in</span> obj);
+    <span class="keyword">return</span> <span class="literal">result</span>;
+}
+</code></pre><h3 id="数组遍历新写法，可以省几个字符">数组遍历新写法，可以省几个字符</h3><h5 id="说明:-2">说明:</h5><p>   for循环中间体实际上是一个对结果取bool值的过程，既然这样，可以这样写，<br>   另外一点值得说明的是，for循环只要求有两个分号，不对分号间是否有表达式做要求</p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">reverseLoop</span><span class="params">(arr)</span> {</span>
+    <span class="keyword">for</span> (var <span class="built_in">i</span> = arr.<span class="built_in">length</span>;<span class="built_in">i</span>--;) <span class="cell">{
+        console.log(i, arr[i]);
+    }</span>
+}
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/03/17/javascript-shortcut/" data-id="ci7dhkb2k00086wen6maf0uss" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/codes/">codes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shortcut/">shortcut</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/03/17/Adblock-filter-resource/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Adblock过滤网站的静态资源</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
         
           <aside id="sidebar">

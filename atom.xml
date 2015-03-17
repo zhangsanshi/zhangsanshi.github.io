@@ -4,7 +4,7 @@
   <subtitle><![CDATA[闻道有先后，术业有专攻]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-03-17T15:22:52.000Z</updated>
+  <updated>2015-03-17T16:26:52.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[一些js的简便写法]]></title>
+    <link href="http://yoursite.com/2015/03/17/javascript-shortcut/"/>
+    <id>http://yoursite.com/2015/03/17/javascript-shortcut/</id>
+    <published>2015-03-17T15:51:20.000Z</published>
+    <updated>2015-03-17T16:26:52.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="没有考究性能，只是感到有趣">没有考究性能，只是感到有趣</h2><h3 id="获取当前是星期几">获取当前是星期几</h3><h5 id="说明:">说明:</h5><p>  这个方法是无意中看到的，当时就记得死死的</p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">getDay</span><span class="params">(date)</span> </span>{
+    <span class="keyword">var</span> weeks = [<span class="string">'日'</span>, <span class="string">'一'</span>, <span class="string">'二'</span>, <span class="string">'三'</span>, <span class="string">'四'</span>, <span class="string">'五'</span>, <span class="string">'六'</span>];
+    <span class="keyword">return</span> weeks[<span class="keyword">new</span> <span class="built_in">Date</span>(date).getDay()];
+}
+</code></pre><h3 id="把object的属性放在一个数组里">把object的属性放在一个数组里</h3><h5 id="说明:-1">说明:</h5><p>   注意for循环，是没有循环体的，利用的是for(key in obj)，会遍历obj属性且对key赋值</p>
+<pre><code>function attr2Arr(obj) {
+    <span class="keyword">var</span> <span class="literal">result</span> = [];
+    <span class="keyword">for</span> (<span class="literal">result</span>[<span class="literal">result</span>.length] <span class="keyword">in</span> obj);
+    <span class="keyword">return</span> <span class="literal">result</span>;
+}
+</code></pre><h3 id="数组遍历新写法，可以省几个字符">数组遍历新写法，可以省几个字符</h3><h5 id="说明:-2">说明:</h5><p>   for循环中间体实际上是一个对结果取bool值的过程，既然这样，可以这样写，<br>   另外一点值得说明的是，for循环只要求有两个分号，不对分号间是否有表达式做要求</p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">reverseLoop</span><span class="params">(arr)</span> {</span>
+    <span class="keyword">for</span> (var <span class="built_in">i</span> = arr.<span class="built_in">length</span>;<span class="built_in">i</span>--;) <span class="cell">{
+        console.log(i, arr[i]);
+    }</span>
+}
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="没有考究性能，只是感到有趣">没有考究性能，只是感到有趣</h2><h3 id="获取当前是星期几">获取当前是星期几</h3><h5 id="说明:">说明:</h5><p>  这个方法是无意中看到的，当时就记得死死的</p>
+<pre><code><span ]]>
+    </summary>
+    
+      <category term="codes" scheme="http://yoursite.com/tags/codes/"/>
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="shortcut" scheme="http://yoursite.com/tags/shortcut/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Adblock过滤网站的静态资源]]></title>
