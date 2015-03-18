@@ -88,10 +88,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="没有考究性能，只是感到有趣">没有考究性能，只是感到有趣</h2><h3 id="获取当前是星期几">获取当前是星期几</h3><h5 id="说明:">说明:</h5><p>  这个方法是无意中看到的，当时就记得死死的</p>
+        <h2 id="没有考究性能，只是感到有趣">没有考究性能，只是感到有趣</h2><h3 id="获取当前是星期几">获取当前是星期几</h3><h5 id="说明:">说明:</h5><p>  这个方法是无意中看到的，后面是变形</p>
 <pre><code><span class="function"><span class="keyword">function</span> <span class="title">getDay</span><span class="params">(date)</span> </span>{
     <span class="keyword">var</span> weeks = [<span class="string">'日'</span>, <span class="string">'一'</span>, <span class="string">'二'</span>, <span class="string">'三'</span>, <span class="string">'四'</span>, <span class="string">'五'</span>, <span class="string">'六'</span>];
     <span class="keyword">return</span> weeks[<span class="keyword">new</span> <span class="built_in">Date</span>(date).getDay()];
+}
+<span class="function"><span class="keyword">function</span> <span class="title">getDay</span><span class="params">(date)</span> </span>{
+    <span class="keyword">var</span> weeks = <span class="string">"日一二三四五六"</span>;
+    <span class="keyword">return</span> weeks[<span class="keyword">new</span> <span class="built_in">Date</span>(date).getDay()];
+}
+<span class="function"><span class="keyword">function</span> <span class="title">getDay</span><span class="params">(date)</span> </span>{
+    <span class="keyword">var</span> weeks = <span class="string">"日一二三四五六"</span>;
+    <span class="keyword">return</span> weeks.charAt(<span class="keyword">new</span> <span class="built_in">Date</span>(date).getDay());
 }
 </code></pre><h3 id="把object的属性放在一个数组里">把object的属性放在一个数组里</h3><h5 id="说明:-1">说明:</h5><p>   注意for循环，是没有循环体的，利用的是for(key in obj)，会遍历obj属性且对key赋值</p>
 <pre><code>function attr2Arr(obj) {
@@ -109,7 +117,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/17/javascript-shortcut/" data-id="ci7diqh4d0008gken5wgafuy9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/17/javascript-shortcut/" data-id="ci7etknvq0008v8eny47yqn34" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/codes/">codes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shortcut/">shortcut</a></li></ul>
@@ -150,7 +158,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/17/Adblock-filter-resource/" data-id="ci7diqh3i0000gkenxig9bnzh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/17/Adblock-filter-resource/" data-id="ci7etknv60000v8eno2uezing" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ERR-BLOCKED-BY-CLIENT/">ERR_BLOCKED_BY_CLIENT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/adblock/">adblock</a></li></ul>
@@ -190,7 +198,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/08/ubuntu-install-wordpress/" data-id="ci7diqh4d0005gkenabrx6ffr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/08/ubuntu-install-wordpress/" data-id="ci7etknv60005v8en4i0d02w7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
@@ -229,7 +237,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/08/first-article-in-github/" data-id="ci7diqh4d000fgkenkerr5048" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/08/first-article-in-github/" data-id="ci7etknvu000fv8enfsgs66cf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/其他/">其他</a></li></ul>

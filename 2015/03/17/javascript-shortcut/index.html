@@ -5,30 +5,33 @@
   
   <title>一些js的简便写法 | zhangsanshi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="没有考究性能，只是感到有趣获取当前是星期几说明:  这个方法是无意中看到的，当时就记得死死的
+  <meta name="description" content="没有考究性能，只是感到有趣获取当前是星期几说明:  这个方法是无意中看到的，后面是变形
 function getDay(date) {
     var weeks = [&apos;日&apos;, &apos;一&apos;, &apos;二&apos;, &apos;三&apos;, &apos;四&apos;, &apos;五&apos;, &apos;六&apos;];
     return weeks[new Date(date).getDay()];
 }
-把object的属性放在一个数组里说明:   注意for循环，">
+function getDay(date) {
+    var we">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一些js的简便写法">
 <meta property="og:url" content="http://yoursite.com/2015/03/17/javascript-shortcut/index.html">
 <meta property="og:site_name" content="zhangsanshi">
-<meta property="og:description" content="没有考究性能，只是感到有趣获取当前是星期几说明:  这个方法是无意中看到的，当时就记得死死的
+<meta property="og:description" content="没有考究性能，只是感到有趣获取当前是星期几说明:  这个方法是无意中看到的，后面是变形
 function getDay(date) {
     var weeks = [&apos;日&apos;, &apos;一&apos;, &apos;二&apos;, &apos;三&apos;, &apos;四&apos;, &apos;五&apos;, &apos;六&apos;];
     return weeks[new Date(date).getDay()];
 }
-把object的属性放在一个数组里说明:   注意for循环，">
+function getDay(date) {
+    var we">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一些js的简便写法">
-<meta name="twitter:description" content="没有考究性能，只是感到有趣获取当前是星期几说明:  这个方法是无意中看到的，当时就记得死死的
+<meta name="twitter:description" content="没有考究性能，只是感到有趣获取当前是星期几说明:  这个方法是无意中看到的，后面是变形
 function getDay(date) {
     var weeks = [&apos;日&apos;, &apos;一&apos;, &apos;二&apos;, &apos;三&apos;, &apos;四&apos;, &apos;五&apos;, &apos;六&apos;];
     return weeks[new Date(date).getDay()];
 }
-把object的属性放在一个数组里说明:   注意for循环，">
+function getDay(date) {
+    var we">
   
     <link rel="alternative" href="/atom.xml" title="zhangsanshi" type="application/atom+xml">
   
@@ -101,10 +104,18 @@ function getDay(date) {
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="没有考究性能，只是感到有趣">没有考究性能，只是感到有趣</h2><h3 id="获取当前是星期几">获取当前是星期几</h3><h5 id="说明:">说明:</h5><p>  这个方法是无意中看到的，当时就记得死死的</p>
+        <h2 id="没有考究性能，只是感到有趣">没有考究性能，只是感到有趣</h2><h3 id="获取当前是星期几">获取当前是星期几</h3><h5 id="说明:">说明:</h5><p>  这个方法是无意中看到的，后面是变形</p>
 <pre><code><span class="function"><span class="keyword">function</span> <span class="title">getDay</span><span class="params">(date)</span> </span>{
     <span class="keyword">var</span> weeks = [<span class="string">'日'</span>, <span class="string">'一'</span>, <span class="string">'二'</span>, <span class="string">'三'</span>, <span class="string">'四'</span>, <span class="string">'五'</span>, <span class="string">'六'</span>];
     <span class="keyword">return</span> weeks[<span class="keyword">new</span> <span class="built_in">Date</span>(date).getDay()];
+}
+<span class="function"><span class="keyword">function</span> <span class="title">getDay</span><span class="params">(date)</span> </span>{
+    <span class="keyword">var</span> weeks = <span class="string">"日一二三四五六"</span>;
+    <span class="keyword">return</span> weeks[<span class="keyword">new</span> <span class="built_in">Date</span>(date).getDay()];
+}
+<span class="function"><span class="keyword">function</span> <span class="title">getDay</span><span class="params">(date)</span> </span>{
+    <span class="keyword">var</span> weeks = <span class="string">"日一二三四五六"</span>;
+    <span class="keyword">return</span> weeks.charAt(<span class="keyword">new</span> <span class="built_in">Date</span>(date).getDay());
 }
 </code></pre><h3 id="把object的属性放在一个数组里">把object的属性放在一个数组里</h3><h5 id="说明:-1">说明:</h5><p>   注意for循环，是没有循环体的，利用的是for(key in obj)，会遍历obj属性且对key赋值</p>
 <pre><code>function attr2Arr(obj) {
@@ -122,7 +133,7 @@ function getDay(date) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/17/javascript-shortcut/" data-id="ci7diqh4d0008gken5wgafuy9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/17/javascript-shortcut/" data-id="ci7etknvq0008v8eny47yqn34" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/codes/">codes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shortcut/">shortcut</a></li></ul>
