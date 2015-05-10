@@ -129,11 +129,18 @@ function getDay(date) {
         console.log(i, arr[i]);
     }</span>
 }
+</code></pre><h3 id="蛋疼的问题，要所谓的优雅的方式实现字符串减一">蛋疼的问题，要所谓的优雅的方式实现字符串减一</h3><h5 id="说明:-3">说明:</h5><p>   认为substring、substr、转化数组都不优雅</p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">strPop</span><span class="params">(str)</span> </span>{
+   <span class="keyword">return</span> str.replace(<span class="regexp">/[\s\S]$/</span>, <span class="string">''</span>);
+}
+</code></pre><h3 id="在js里如何快速判断一个数字是不是int类型的数">在js里如何快速判断一个数字是不是int类型的数</h3><pre><code><span class="function"><span class="keyword">function</span> <span class="title">isInt</span> <span class="params">(number)</span> </span>{
+    <span class="keyword">return</span> (<span class="built_in">number</span> &gt;&gt; <span class="number">32</span>) === <span class="built_in">number</span>;
+}
 </code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/17/javascript-shortcut/" data-id="ci8d8und40008u0enec96vj1k" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/17/javascript-shortcut/" data-id="ci9ionx0n0008hgenok2t4zhu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/codes/">codes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shortcut/">shortcut</a></li></ul>

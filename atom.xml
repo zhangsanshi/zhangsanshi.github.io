@@ -4,7 +4,7 @@
   <subtitle><![CDATA[闻道有先后，术业有专攻]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-03-18T14:08:51.000Z</updated>
+  <updated>2015-05-10T16:28:26.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/03/17/javascript-shortcut/"/>
     <id>http://yoursite.com/2015/03/17/javascript-shortcut/</id>
     <published>2015-03-17T15:51:20.000Z</published>
-    <updated>2015-03-18T14:08:51.000Z</updated>
+    <updated>2015-05-10T16:28:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="没有考究性能，只是感到有趣">没有考究性能，只是感到有趣</h2><h3 id="获取当前是星期几">获取当前是星期几</h3><h5 id="说明:">说明:</h5><p>  这个方法是无意中看到的，后面是变形</p>
 <pre><code><span class="function"><span class="keyword">function</span> <span class="title">getDay</span><span class="params">(date)</span> </span>{
     <span class="keyword">var</span> weeks = [<span class="string">'日'</span>, <span class="string">'一'</span>, <span class="string">'二'</span>, <span class="string">'三'</span>, <span class="string">'四'</span>, <span class="string">'五'</span>, <span class="string">'六'</span>];
@@ -44,6 +44,13 @@
     <span class="keyword">for</span> (var <span class="built_in">i</span> = arr.<span class="built_in">length</span>;<span class="built_in">i</span>--;) <span class="cell">{
         console.log(i, arr[i]);
     }</span>
+}
+</code></pre><h3 id="蛋疼的问题，要所谓的优雅的方式实现字符串减一">蛋疼的问题，要所谓的优雅的方式实现字符串减一</h3><h5 id="说明:-3">说明:</h5><p>   认为substring、substr、转化数组都不优雅</p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">strPop</span><span class="params">(str)</span> </span>{
+   <span class="keyword">return</span> str.replace(<span class="regexp">/[\s\S]$/</span>, <span class="string">''</span>);
+}
+</code></pre><h3 id="在js里如何快速判断一个数字是不是int类型的数">在js里如何快速判断一个数字是不是int类型的数</h3><pre><code><span class="function"><span class="keyword">function</span> <span class="title">isInt</span> <span class="params">(number)</span> </span>{
+    <span class="keyword">return</span> (<span class="built_in">number</span> &gt;&gt; <span class="number">32</span>) === <span class="built_in">number</span>;
 }
 </code></pre>]]></content>
     <summary type="html">
