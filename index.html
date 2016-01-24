@@ -88,7 +88,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="没有考究性能，只是感到有趣">没有考究性能，只是感到有趣</h2><h3 id="获取当前是星期几">获取当前是星期几</h3><h5 id="说明:">说明:</h5><p>  这个方法是无意中看到的，后面是变形</p>
+        <h2 id="没有考究性能，只是感到有趣">没有考究性能，只是感到有趣</h2><h3 id="获取某个日期的该月的最后一天">获取某个日期的该月的最后一天</h3><h5 id="说明:">说明:</h5><p>  这个方法改造下还可以用来判断闰年问题</p>
+<pre><code>function getLastDay(date){
+    <span class="keyword">var</span> _date = <span class="built_in">new</span> Date(date),
+        <span class="keyword">map</span> = [<span class="number">31</span>, <span class="number">30</span>, <span class="number">29</span>, <span class="number">28</span>],
+        month = _date.getMonth();
+    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, <span class="built_in">len</span> = <span class="keyword">map</span>.length; i &lt; <span class="built_in">len</span>; i++) {
+        _date.setMonth(month);
+        _date.setDate(<span class="keyword">map</span>[i]);
+        <span class="keyword">if</span> (_date.getMonth() == month) {
+            <span class="keyword">return</span> <span class="keyword">map</span>[i];
+        }
+    }
+}
+</code></pre><h3 id="获取当前是星期几">获取当前是星期几</h3><h5 id="说明:-1">说明:</h5><p>  这个方法是无意中看到的，后面是变形</p>
 <pre><code><span class="function"><span class="keyword">function</span> <span class="title">getDay</span><span class="params">(date)</span> </span>{
     <span class="keyword">var</span> weeks = [<span class="string">'日'</span>, <span class="string">'一'</span>, <span class="string">'二'</span>, <span class="string">'三'</span>, <span class="string">'四'</span>, <span class="string">'五'</span>, <span class="string">'六'</span>];
     <span class="keyword">return</span> weeks[<span class="keyword">new</span> <span class="built_in">Date</span>(date).getDay()];
@@ -101,19 +114,19 @@
     <span class="keyword">var</span> weeks = <span class="string">"日一二三四五六"</span>;
     <span class="keyword">return</span> weeks.charAt(<span class="keyword">new</span> <span class="built_in">Date</span>(date).getDay());
 }
-</code></pre><h3 id="把object的属性放在一个数组里">把object的属性放在一个数组里</h3><h5 id="说明:-1">说明:</h5><p>   注意for循环，是没有循环体的，利用的是for(key in obj)，会遍历obj属性且对key赋值</p>
+</code></pre><h3 id="把object的属性放在一个数组里">把object的属性放在一个数组里</h3><h5 id="说明:-2">说明:</h5><p>   注意for循环，是没有循环体的，利用的是for(key in obj)，会遍历obj属性且对key赋值</p>
 <pre><code>function attr2Arr(obj) {
     <span class="keyword">var</span> <span class="literal">result</span> = [];
     <span class="keyword">for</span> (<span class="literal">result</span>[<span class="literal">result</span>.length] <span class="keyword">in</span> obj);
     <span class="keyword">return</span> <span class="literal">result</span>;
 }
-</code></pre><h3 id="数组遍历新写法，可以省几个字符">数组遍历新写法，可以省几个字符</h3><h5 id="说明:-2">说明:</h5><p>   for循环中间体实际上是一个对结果取bool值的过程，既然这样，可以这样写，<br>   另外一点值得说明的是，for循环只要求有两个分号，不对分号间是否有表达式做要求</p>
+</code></pre><h3 id="数组遍历新写法，可以省几个字符">数组遍历新写法，可以省几个字符</h3><h5 id="说明:-3">说明:</h5><p>   for循环中间体实际上是一个对结果取bool值的过程，既然这样，可以这样写，<br>   另外一点值得说明的是，for循环只要求有两个分号，不对分号间是否有表达式做要求</p>
 <pre><code><span class="function"><span class="keyword">function</span> <span class="title">reverseLoop</span><span class="params">(arr)</span> {</span>
     <span class="keyword">for</span> (var <span class="built_in">i</span> = arr.<span class="built_in">length</span>;<span class="built_in">i</span>--;) <span class="cell">{
         console.log(i, arr[i]);
     }</span>
 }
-</code></pre><h3 id="蛋疼的问题，要所谓的优雅的方式实现字符串减一">蛋疼的问题，要所谓的优雅的方式实现字符串减一</h3><h5 id="说明:-3">说明:</h5><p>   认为substring、substr、转化数组都不优雅</p>
+</code></pre><h3 id="蛋疼的问题，要所谓的优雅的方式实现字符串减一">蛋疼的问题，要所谓的优雅的方式实现字符串减一</h3><h5 id="说明:-4">说明:</h5><p>   认为substring、substr、转化数组都不优雅</p>
 <pre><code><span class="function"><span class="keyword">function</span> <span class="title">strPop</span><span class="params">(str)</span> </span>{
    <span class="keyword">return</span> str.replace(<span class="regexp">/[\s\S]$/</span>, <span class="string">''</span>);
 }
@@ -124,7 +137,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/17/javascript-shortcut/" data-id="ci9ionx0n0008hgenok2t4zhu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/17/javascript-shortcut/" data-id="cijsrmwux0008u4enpij9th9g" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/codes/">codes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shortcut/">shortcut</a></li></ul>
@@ -165,7 +178,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/17/Adblock-filter-resource/" data-id="ci9ionwzr0000hgenq4dysukd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/17/Adblock-filter-resource/" data-id="cijsrmwu20000u4ennu7rpsz9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ERR-BLOCKED-BY-CLIENT/">ERR_BLOCKED_BY_CLIENT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/adblock/">adblock</a></li></ul>
@@ -205,7 +218,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/08/ubuntu-install-wordpress/" data-id="ci9ionx070005hgenufmtvgk8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/08/ubuntu-install-wordpress/" data-id="cijsrmwux0005u4en77juu2nz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
@@ -245,7 +258,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/08/first-article-in-github/" data-id="ci9ionx0n000fhgeng76yq5tb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/08/first-article-in-github/" data-id="cijsrmwux000fu4enj97cve2b" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/其他/">其他</a></li></ul>
@@ -325,7 +338,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2015 zhangsanshi<br>
+      &copy; 2016 zhangsanshi<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
