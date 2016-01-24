@@ -139,6 +139,12 @@ function getLastDay(date){
         console.log(i, arr[i]);
     }</span>
 }
+</code></pre><p>   另一种写法要求数组字段不能出现为false的情况</p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">loop</span><span class="params">(arr)</span> </span>{
+    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, tmp; tmp = arr[i++];) {
+        <span class="built_in">console</span>.log(i, tmp);
+    }
+}
 </code></pre><h3 id="蛋疼的问题，要所谓的优雅的方式实现字符串减一">蛋疼的问题，要所谓的优雅的方式实现字符串减一</h3><h5 id="说明:-4">说明:</h5><p>   认为substring、substr、转化数组都不优雅</p>
 <pre><code><span class="function"><span class="keyword">function</span> <span class="title">strPop</span><span class="params">(str)</span> </span>{
    <span class="keyword">return</span> str.replace(<span class="regexp">/[\s\S]$/</span>, <span class="string">''</span>);
@@ -150,7 +156,7 @@ function getLastDay(date){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/17/javascript-shortcut/" data-id="cijsrmwux0008u4enpij9th9g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/17/javascript-shortcut/" data-id="cijss5f2g000864entbpgyasp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/codes/">codes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shortcut/">shortcut</a></li></ul>

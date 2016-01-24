@@ -4,7 +4,7 @@
   <subtitle><![CDATA[闻道有先后，术业有专攻]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-01-24T16:33:46.282Z</updated>
+  <updated>2016-01-24T16:49:09.065Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/03/17/javascript-shortcut/"/>
     <id>http://yoursite.com/2015/03/17/javascript-shortcut/</id>
     <published>2015-03-17T15:51:20.000Z</published>
-    <updated>2016-01-24T16:33:46.282Z</updated>
+    <updated>2016-01-24T16:49:09.065Z</updated>
     <content type="html"><![CDATA[<h2 id="没有考究性能，只是感到有趣">没有考究性能，只是感到有趣</h2><h3 id="获取某个日期的该月的最后一天">获取某个日期的该月的最后一天</h3><h5 id="说明:">说明:</h5><p>  这个方法改造下还可以用来判断闰年问题</p>
 <pre><code>function getLastDay(date){
     <span class="keyword">var</span> _date = <span class="built_in">new</span> Date(date),
@@ -57,6 +57,12 @@
     <span class="keyword">for</span> (var <span class="built_in">i</span> = arr.<span class="built_in">length</span>;<span class="built_in">i</span>--;) <span class="cell">{
         console.log(i, arr[i]);
     }</span>
+}
+</code></pre><p>   另一种写法要求数组字段不能出现为false的情况</p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">loop</span><span class="params">(arr)</span> </span>{
+    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, tmp; tmp = arr[i++];) {
+        <span class="built_in">console</span>.log(i, tmp);
+    }
 }
 </code></pre><h3 id="蛋疼的问题，要所谓的优雅的方式实现字符串减一">蛋疼的问题，要所谓的优雅的方式实现字符串减一</h3><h5 id="说明:-4">说明:</h5><p>   认为substring、substr、转化数组都不优雅</p>
 <pre><code><span class="function"><span class="keyword">function</span> <span class="title">strPop</span><span class="params">(str)</span> </span>{
