@@ -5,6 +5,23 @@ tags: [javascript, codes, shortcut]
 
 ## 没有考究性能，只是感到有趣
 
+### 获取某个日期的该月的最后一天
+##### 说明:
+  这个方法改造下还可以用来判断闰年问题
+
+    function getLastDay(date){
+        var _date = new Date(date),
+            map = [31, 30, 29, 28],
+            month = _date.getMonth();
+        for (var i = 0, len = map.length; i < len; i++) {
+            _date.setMonth(month);
+            _date.setDate(map[i]);
+            if (_date.getMonth() == month) {
+                return map[i];
+            }
+        }
+    }
+
 ### 获取当前是星期几
 ##### 说明:
   这个方法是无意中看到的，后面是变形
@@ -41,6 +58,29 @@ tags: [javascript, codes, shortcut]
             for (var i = arr.length;i--;) {
                 console.log(i, arr[i]);
             }
+        }
+        
+   另一种写法要求数组字段不能出现为false的情况
+        
+        function loop(arr) {
+            for (var i = 0, tmp; tmp = arr[i++];) {
+                console.log(i, tmp);
+            }
+        }
+        
+        
+### 蛋疼的问题，要所谓的优雅的方式实现字符串减一
+##### 说明: 
+   认为substring、substr、转化数组都不优雅
+   
+         function strPop(str) {
+            return str.replace(/[\s\S]$/, '');
+         }
+
+### 在js里如何快速判断一个数字是不是int类型的数
+        
+        function isInt (number) {
+            return (number >> 32) === number;
         }
      
 
