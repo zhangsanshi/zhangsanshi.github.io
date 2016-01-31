@@ -7,8 +7,24 @@ tags: [javascript, codes, shortcut]
 
 ### 获取某个日期的该月的最后一天
 ##### 说明:
+
   这个方法改造下还可以用来判断闰年问题
 
+    function getLastDay(date) {
+        var map = [31, , 31, 30, 31, 30, 31, 31, 30, 31, 30 ,31], //二月留空
+            d = new Date(date),
+            _d = new Date(d),
+            m = d.getMonth();    
+        var lastDay = map[m] || (function (){
+             _d.setMonth(1, 29); //2月29
+            return (_d.getMonth() == 1) ? 29 : 28;
+        })();
+        return lastDay;
+    }
+    
+    
+这个废弃了    
+    
     function getLastDay(date){
         var _date = new Date(date),
             map = [31, 30, 29, 28],
