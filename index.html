@@ -64,17 +64,26 @@
     <article id="post-angular-template-template" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/04/05/angular-template-template/" class="article-date">
-  <time datetime="2016-04-04T17:42:20.441Z" itemprop="datePublished">2016-04-05</time>
+  <time datetime="2016-04-04T17:06:14.000Z" itemprop="datePublished">2016-04-05</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/05/angular-template-template/">angular template template</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>title: angular template template<br>date: 2016-04-05 01:06:14</p>
-<h2 id="tags_3A__5Bangular_5D"><a href="#tags_3A__5Bangular_5D" class="headerlink" title="tags: [angular]"></a>tags: [angular]</h2><h3 id="u95EE_u9898_u63CF_u8FF0"><a href="#u95EE_u9898_u63CF_u8FF0" class="headerlink" title="问题描述"></a>问题描述</h3><p>前段时间一个项目，对权限粒度要求非常细，需要控制字段级别的显隐。<br>当时时间比较急，用的是ng-if做的，大概估摸了下，100条的列表渲染要近一秒，感觉起来还是比较慢的，没办法watch的太多。<br>后面想了一个办法，先对angular模板进行权限处理，处理后再交给angular处理，当时想法是angular-template 进行包装一层，放入模板处理代码，但是一直没有着手，可能自己也感觉不靠谱吧。<br>前段时间灵光一闪，为何不再引入一层模板引擎，只需要对以前的代码的权限的ng-if进行处理即可，而且权限处理是被包装成方法的，替换起来很方便。<br>但是问题来了</p>
+        <h3 id="u95EE_u9898_u63CF_u8FF0"><a href="#u95EE_u9898_u63CF_u8FF0" class="headerlink" title="问题描述"></a>问题描述</h3><p>前段时间一个项目，对权限粒度要求非常细，需要控制字段级别的显隐。<br>当时时间比较急，用的是ng-if做的，大概估摸了下，100条的列表渲染要近一秒，感觉起来还是比较慢的，没办法watch的太多。<br>后面想了一个办法，先对angular模板进行权限处理，处理后再交给angular处理，当时想法是angular-template 进行包装一层，放入模板处理代码，但是一直没有着手，可能自己也感觉不靠谱吧。<br>前段时间灵光一闪，为何不再引入一层模板引擎，只需要对以前的代码的权限的ng-if进行处理即可，而且权限处理是被包装成方法的，替换起来很方便。<br>但是问题来了hexo</p>
 <p>   1 模板引擎的分隔符尽量不要和angular默认的一致</p>
 <p>   2 代码库不要太大，只需要做简单的逻辑处理，其他还是交给angular自身的模板引擎去做，要简洁</p>
 <p>这样一来，一直用的artTemplate进入了视野里，写了个demo，简单测试起来没问题。<br>本来打算在路由那里做掉，后面发现路由config阶段，拿不到各种值，然后是通过指令去做了，可以在<a href="https://github.com/zhangsanshi/angular-summary/tree/master/src/angular-template-template" target="_blank" rel="external">这里</a>查看代码</p>
@@ -84,9 +93,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/04/05/angular-template-template/" data-id="cimmabmdh000iw8enb31hi4lx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/04/05/angular-template-template/" data-id="cimmagg3s000it4endny6twsu" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular/">angular</a></li></ul>
+
     </footer>
   </div>
   
@@ -121,7 +132,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/31/think-more-do-later/" data-id="cimmabmd20008w8enrqy2aygv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/31/think-more-do-later/" data-id="cimmagg3d0008t4entyjmtdwx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/think/">think</a></li></ul>
@@ -222,7 +233,7 @@ function getDay(date) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/17/javascript-shortcut/" data-id="cimmabmd2000bw8en5xdvjy19" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/17/javascript-shortcut/" data-id="cimmagg3s000bt4en8wu4q3uh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/codes/">codes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shortcut/">shortcut</a></li></ul>
@@ -263,7 +274,7 @@ function getDay(date) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/17/Adblock-filter-resource/" data-id="cimmabmcz0000w8en481yg908" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/17/Adblock-filter-resource/" data-id="cimmagg2x0000t4enh264elrl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ERR-BLOCKED-BY-CLIENT/">ERR_BLOCKED_BY_CLIENT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/adblock/">adblock</a></li></ul>
@@ -303,7 +314,7 @@ function getDay(date) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/08/ubuntu-install-wordpress/" data-id="cimmabmd20005w8enwqd3kmyq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/08/ubuntu-install-wordpress/" data-id="cimmagg3d0005t4enyt7zsrqo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
@@ -326,7 +337,7 @@ function getDay(date) {
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ERR-BLOCKED-BY-CLIENT/">ERR_BLOCKED_BY_CLIENT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/adblock/">adblock</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codes/">codes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shortcut/">shortcut</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/think/">think</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ERR-BLOCKED-BY-CLIENT/">ERR_BLOCKED_BY_CLIENT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/adblock/">adblock</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codes/">codes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shortcut/">shortcut</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/think/">think</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -335,7 +346,7 @@ function getDay(date) {
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ERR-BLOCKED-BY-CLIENT/" style="font-size: 10px;">ERR_BLOCKED_BY_CLIENT</a> <a href="/tags/adblock/" style="font-size: 10px;">adblock</a> <a href="/tags/codes/" style="font-size: 10px;">codes</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/shortcut/" style="font-size: 10px;">shortcut</a> <a href="/tags/think/" style="font-size: 10px;">think</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a>
+      <a href="/tags/ERR-BLOCKED-BY-CLIENT/" style="font-size: 10px;">ERR_BLOCKED_BY_CLIENT</a> <a href="/tags/adblock/" style="font-size: 10px;">adblock</a> <a href="/tags/angular/" style="font-size: 10px;">angular</a> <a href="/tags/codes/" style="font-size: 10px;">codes</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/shortcut/" style="font-size: 10px;">shortcut</a> <a href="/tags/think/" style="font-size: 10px;">think</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a>
     </div>
   </div>
 
@@ -356,7 +367,7 @@ function getDay(date) {
       <ul>
         
           <li>
-            <a href="/2016/04/05/angular-template-template/">(no title)</a>
+            <a href="/2016/04/05/angular-template-template/">angular template template</a>
           </li>
         
           <li>
